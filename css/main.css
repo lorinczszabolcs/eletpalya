@@ -1,0 +1,39 @@
+.header
+{
+  background-image:url("/img/header.jpg");
+  height: 70vh;
+  min-height: 150px;
+  padding-bottom: 50px;
+  top:0;
+  background-position:0;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.header h1
+{
+  color: #fff;
+  font-size: 85px;
+  font-weight: bold;
+}
+
+.header li
+{
+  font-size:20px;
+  color: #fff;
+}
+
+.image-block
+{
+  float:left;
+  width:100%;
+  margin-bottom:10px;
+}
+
+hr
+{
+	border-top: 1px solid #cccccc;
+}
