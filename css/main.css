@@ -1,6 +1,6 @@
 .header
 {
-  background-image:url("/img/header.jpg");
+  background-image:url("../img/header.jpg");
   height: 70vh;
   min-height: 150px;
   padding-bottom: 50px;
