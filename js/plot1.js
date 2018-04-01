@@ -50,7 +50,7 @@ function loadJSON(callback, filename) {
 
     Plotly.plot(gd, data, layout);
 
-  }, '/data/birth_stud.json');
+  }, '../data/birth_stud.json');
 
   window.onresize = function() {
       Plotly.Plots.resize(gd);
