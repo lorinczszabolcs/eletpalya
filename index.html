@@ -14,6 +14,9 @@
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
+		 <!-- Plotly.js -->
+  	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 	   <!-- Custom styles -->
 	   <link href="css/main.css" rel="stylesheet">
 	</head>
@@ -57,8 +60,10 @@
 							<a class="magic-btn" href="https://www.facebook.com">Facebook</a>
 							-bányászatból kinyert
 							<a class="magic-btn" href="https://szekelydata.csaladen.es/verseny/data.json">
-								adatokat.
+								adatokat
 							</a>
+							, mely <strong>49220</strong> Facebook profil
+							publikus adatait tartalmazza.
 							Ezúttal a hangsúlyt a <strong>Székely(földi)</strong> emberek
 							<strong>életpályájára</strong> fektetjük, születési helyüktől,
 							tanulmányaikon át egészen a szakmájukig, lakhelyükig.
@@ -75,9 +80,58 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<p>
-							Semmiképp sem lenne meglepő, ha a születési helyünk jelentős
-							mértékben befolyásolná, hogy milyen tanulmányi területet választunk.
-							Az alábbi grafikonon pontosan ezt láthatjuk ábrázolva.
+							Elsőként a <strong>születési hely</strong>
+							és a választott <strong>tanulmányok</strong> közötti
+							kapcsolatot fogjuk feltérképezni. Mivel a <strong>49220</strong>
+							profilból sok esetben nem áll rendelkezésünkre információ az egyes
+							személyek tanulmányairól, vagy éppen hibás/értelmezhetetlen a
+							bányászott adat, előbb ki kell szűrnünk a számunkra megfelelőeket.
+							A szűrés után <strong>3404</strong> felhasználóprofil	 marad.
+							(OPCIONÁLIS: HIBAKÜSZÖB, VÁROSOKON BELÜLI ELOSZLÁS )
+							Semmiképp sem meglepő, hogy a születési helyünk jelentős
+							mértékben befolyásolja, hogy milyen tanulmányi területet választunk.
+							Az alábbi grafikon pontosan ezt ábrázolja.
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+					</div>
+					<div class="col-lg-12 plot" id="plot1"><!-- Plotly chart --></div>
+					<p>
+						(TODO: TÖBB MAGYARÁZAT)
+					</p>
+					<div class="col-lg-12 plot" id="plot2"><!-- Plotly chart --></div>
+					<p>
+						(TODO: TÖBB MAGYARÁZAT)
+					</p>
+				</div>
+				<br />
+				<div class="row">
+          <div class="col-lg-12">
+            <h2>Lakhely és tanulmányok kapcsolata</h2>
+          </div>
+        </div>
+				<hr />
+				<div class="row">
+					<div class="col-lg-12">
+						<p>
+							Most lássuk a profilokon feltűntetett <strong>lakhelyek</strong>
+							és a <strong>tanulmányi területek</strong> közti összefüggéseket!
+							Hasonlóan a tanulmányokhoz az <strong>49220</strong>
+							profilból sok esetben nem áll rendelkezésünkre információ az egyes
+							személyek lakhelyéről, vagy éppen hibás/értelmezhetetlen a
+							bányászott adat, előbb ki kell szűrnünk a számunkra megfelelőeket,
+							ezúttal mind a lakhely, mind a tanulmányok szempontjából.
+							A szűrés után <strong>2334</strong> felhasználóprofil	 marad.
+							(OPCIONÁLIS: HIBAKÜSZÖB, VÁROSOKON BELÜLI ELOSZLÁS )
+						 	Grafikonok:
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot5"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot6"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
 						</p>
 					</div>
 				</div>
@@ -91,24 +145,22 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<p>
+							Ugyancsak szűrésnek vesszük alá az adatokat
+							<strong>szakterület</strong> szerint, ebben az esetben a
+							<strong>49220</strong> profilból <strong>6940</strong> marad.
 							Hasonlóan a tanulmányi területhez, a szekterület is jelentős
-							mértékben függ születési helyünktől. Az alábbi grafikonon
-							ezt ábrázolja.
+							mértékben függ születési helyünktől.
+							(OPCIONÁLIS: HIBAKÜSZÖB, VÁROSOKON BELÜLI ELOSZLÁS )
+							Grafikonok:
+							(TODO: TÖBB MAGYARÁZAT)
 						</p>
-					</div>
-				</div>
-				<div class="row">
-          <div class="col-lg-12">
-            <h2>Lakhely és tanulmányok kapcsolata</h2>
-          </div>
-        </div>
-				<hr />
-				<div class="row">
-					<div class="col-lg-12">
+						<div class="col-lg-12 plot" id="plot3"><!-- Plotly chart --></div>
 						<p>
-							Fontos kiemelni, hogy nem csak a  születési helyünk befolyásolja,
-							hogy milyen tanulmányi területet választunk. Az alábbi
-							grafikonon pontosan ezt láthatjuk ábrázolva.
+								(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot4"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
 						</p>
 					</div>
 				</div>
@@ -122,10 +174,22 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<p>
-							!! => szuletesi - tanulmany ?? !!
-							Hasonlóan a tanulmányainkhoz, a szekterület is jelentős
-							mértékben függ  lakhelyünktől. Az alábbi grafikonon
-							ezt ábrázolja.
+							Ahogyan már megszokhattuk, szűrésnek vesszük alá az adatokat
+							<strong>lakhely</strong> és <strong>szakterület</strong>
+							szerint, ebben az esetben a <strong>49220</strong> profilból
+							<strong>5102</strong> marad.
+							(OPCIONÁLIS: HIBAKÜSZÖB, VÁROSOKON BELÜLI ELOSZLÁS )
+
+							Grafikonok:
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot7"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot8"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
 						</p>
 					</div>
 				</div>
@@ -139,11 +203,29 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<p>
-							Amit még elengedhetetlen megemlíteni, hogy tanumányaink milyen módon
-							befolyásolják választott szakterületünket. Ezt elemezhetjük az alábbi
-							grafikon segítségével.
+							Végül, de nem utolsó sorban <strong>tanulmányok</strong> és
+							<strong>szakterület</strong> kapcsolatát vizsgáljuk, előbb azonban
+							ismét szűrűnk, ezesetben a <strong>49220</strong> profilból
+							<strong>1095</strong> marad.
+							(OPCIONÁLIS: HIBAKÜSZÖB, VÁROSOKON BELÜLI ELOSZLÁS )
+							Grafikonok:
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot9"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
+						</p>
+						<div class="col-lg-12 plot" id="plot10"><!-- Plotly chart --></div>
+						<p>
+							(TODO: TÖBB MAGYARÁZAT)
 						</p>
 					</div>
+				</div>
+				<div>
+					<p>
+						(TODO: ADATOK+KÓD, SANKEY DIAGRAMM (Tanulmányok-Munka),
+						Heatmap (kipróbálni), Csak normalizált Stacked? )
+					</p>
 				</div>
 			</div>
 			<!--
@@ -160,6 +242,19 @@
 				&copy; Lőrincz Szabolcs-Botond, 2018
 			</div>
 		</section>
+
+		<!-- Plots -->
+
+		<script src="js/plot1.js"></script>
+		<script src="js/plot2.js"></script>
+		<script src="js/plot3.js"></script>
+		<script src="js/plot4.js"></script>
+		<script src="js/plot5.js"></script>
+		<script src="js/plot6.js"></script>
+		<script src="js/plot7.js"></script>
+		<script src="js/plot8.js"></script>
+		<script src="js/plot9.js"></script>
+		<script src="js/plot10.js"></script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
