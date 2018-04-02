@@ -55,21 +55,10 @@ function loadJSON(callback, filename) {
 
     Plotly.plot(gd, data, layout);
 
-  }, '../eletpalya/data/stud_work_normalized.json');
+    }, '../eletpalya/data/stud_work_normalized.json');
 
-  window.onresize = function() {
-      plotname = '#plot'
-      for (i = 1; i <= 10; i++)
-      {
-        var name = plotname + i.toString();
-        console.log(name);
-        var g3 = d3.select(name)
-            .style({
-              width: WIDTH_IN_PERCENT_OF_PARENT + '%',
-              height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh'
-            });
-        var g = d3.node();
-        Plotly.Plots.resize(g);
-      }
+    window.onresize = function() {
+      Plotly.Plots.resize(gd);
+    }
   };
 })();
