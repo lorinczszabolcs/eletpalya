@@ -62,13 +62,14 @@ function loadJSON(callback, filename) {
       for (i = 1; i <= 10; i++)
       {
         var name = plotname + i.toString();
-        var d3 = d3.select(name)
+        console.log(name);
+        var g3 = d3.select(name)
             .style({
               width: WIDTH_IN_PERCENT_OF_PARENT + '%',
               height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh'
             });
-        d = d3.node();
-        Plotly.Plots.resize(name);
+        var g = d3.node();
+        Plotly.Plots.resize(g);
       }
   };
 })();
