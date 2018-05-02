@@ -60,5 +60,5 @@ function loadJSON(callback, filename) {
     window.onresize = function() {
       Plotly.Plots.resize(gd);
     }
-  };
+  }
 })();
