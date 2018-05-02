@@ -54,11 +54,9 @@ function loadJSON(callback, filename) {
     };
 
     Plotly.plot(gd, data, layout);
+  }, '../eletpalya/data/stud_work_normalized.json');
 
-    }, '../eletpalya/data/stud_work_normalized.json');
-
-    window.onresize = function() {
-      Plotly.Plots.resize(gd);
-    }
-  }
+  window.onresize = function() {
+    Plotly.Plots.resize(gd);
+  };
 })();
