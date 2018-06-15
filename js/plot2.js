@@ -40,22 +40,45 @@ function loadJSON(callback, filename) {
 
     var layout =
     {
-      title: "<b class='text-center'>Tanulmányok csoportosítása születési hely szerint<br>(normalizálva)</b>",
+       title: "<b class='text-center'>Tanulmányok csoportosítása születési hely szerint<br>(normalizálva)</b>",
       "titlefont":
       {
         "size": 20,
+        "color": 'rgb(238, 238, 238)',
       },
-      yaxis:
+      barmode: 'stack',
+      "paper_bgcolor": 'rgb(34, 34, 34)',
+      "plot_bgcolor": 'rgb(34, 34, 34)',
+      "legend":
+      {
+        "bgcolor": 'rgb(34, 34, 34)',
+        "font":
+        {
+          "color": 'rgb(238, 238, 238)',
+        }
+      },
+      "xaxis":
+      {
+        "tickfont":
+        {
+          "color": 'rgb(238, 238, 238)',
+        }
+      },
+      "yaxis":
       {
         tickformat: '%',
-        range: [0,1]
-      },
-      barmode: 'stack'
+        range: [0,1],
+        "tickfont":
+        {
+          "color": 'rgb(238, 238, 238)'
+        }
+      }
     };
 
     Plotly.plot(gd, data, layout);
 
   }, '../eletpalya/data/birth_stud_normalized.json');
+  //}, '../data/birth_stud_normalized.json');
 
   window.onresize = function() {
       Plotly.Plots.resize(gd);

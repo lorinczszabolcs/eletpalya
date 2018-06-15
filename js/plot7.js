@@ -44,13 +44,39 @@ function loadJSON(callback, filename) {
       "titlefont":
       {
         "size": 20,
+        "color": 'rgb(238, 238, 238)',
       },
-      barmode: 'stack'
+      barmode: 'stack',
+      "paper_bgcolor": 'rgb(34, 34, 34)',
+      "plot_bgcolor": 'rgb(34, 34, 34)',
+      "legend":
+      {
+        "bgcolor": 'rgb(34, 34, 34)',
+        "font":
+        {
+          "color": 'rgb(238, 238, 238)',
+        }
+      },
+      "xaxis":
+      {
+        "tickfont":
+        {
+          "color": 'rgb(238, 238, 238)',
+        }
+      },
+      "yaxis":
+      {
+        "tickfont":
+        {
+          "color": 'rgb(238, 238, 238)',
+        }
+      },
     };
 
     Plotly.plot(gd, data, layout);
 
   }, '../eletpalya/data/live_work.json');
+  //}, '../data/live_work.json');
 
   window.onresize = function() {
       Plotly.Plots.resize(gd);

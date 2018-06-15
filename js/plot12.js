@@ -19,7 +19,7 @@ function loadJSON(callback, filename) {
   var WIDTH_IN_PERCENT_OF_PARENT = 98,
       HEIGHT_IN_PERCENT_OF_PARENT = 70;
 
-  var gd3 = d3.select('#plot1')
+  var gd3 = d3.select('#plot12')
       .style({
         width: WIDTH_IN_PERCENT_OF_PARENT + '%',
         height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh'
@@ -38,15 +38,20 @@ function loadJSON(callback, filename) {
       return dictionary[key];
     });
 
+    console.log(data);
+
     var layout =
     {
-      title: "<b>Tanulmányok csoportosítása születési hely szerint</b>",
+      title: "<b class='text-center'>Tanulmányok csoportosítása lakhely szerint</b>",
+      "font":
+      {
+        "color": 'rgb(255, 255, 255)',
+      },
       "titlefont":
       {
         "size": 20,
         "color": 'rgb(238, 238, 238)',
       },
-      barmode: 'stack',
       "paper_bgcolor": 'rgb(34, 34, 34)',
       "plot_bgcolor": 'rgb(34, 34, 34)',
       "legend":
@@ -71,15 +76,22 @@ function loadJSON(callback, filename) {
           "color": 'rgb(238, 238, 238)',
         }
       },
-
+      margin:
+      {
+        "l": 130,
+        "r": 80,
+        "t": 100,
+        "b": 110,
+        "pad": 0,
+        "autoexpand": true,
+      }
     };
 
     Plotly.plot(gd, data, layout);
-
-  }, '../eletpalya/data/birth_stud.json');
-  //}, '../data/birth_stud.json');
+  }, '../eletpalya/data/live_stud_heatmap.json');
+  //}, '../data/live_stud_heatmap.json');
 
   window.onresize = function() {
-      Plotly.Plots.resize(gd);
+    Plotly.Plots.resize(gd);
   };
 })();

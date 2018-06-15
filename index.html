@@ -22,28 +22,28 @@
 	</head>
 
 	<body>
-    <section class="post-header-section">
-        <br><br>
-        <div class="container">
-          <div class="row header">
-            <div class="col-lg-12">
-              <h1 class="display-3 text-center mt-4">Székely(földi)ek pályája</strong></h1>
-              <hr>
-              <ul class="list-inline text-center">
-                  <li>Születés-Tanulás-Lakhely-Munka</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </section>
-    <section class="post-content-section bg-light p-5">
-      <div class="container">
+    	<section class="post-header-section">
+        	<br><br>
+	        <div class="container">
+	          	<div class="row header">
+	            	<div class="col-lg-12">
+	              		<h1 class="display-3 text-center mt-4"><strong>Székely(földi)ek pályája</strong></h1>
+	              		<hr>
+	              		<ul class="list-inline text-center">
+	                  		<li>Születés-Tanulás-Lakhely-Munka</li>
+	              		</ul>
+	            	</div>
+	         	</div>
+	        </div>
+    	</section>
+	    <section class="post-content-section bg-light p-5">
+	     	<div class="container">
 				<br />
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Bevezetés</h2>
-          </div>
-        </div>
+	        	<div class="row">
+	          		<div class="col-lg-12">
+	        	    	<h2>Bevezetés</h2>
+	          		</div>
+	        	</div>
 				<hr />
 				<div class="row">
 					<div class="col-lg-12">
@@ -72,10 +72,10 @@
 				</div>
 				<br />
 				<div class="row">
-          <div class="col-lg-12">
-            <h2>Születési hely és tanulmányok kapcsolata</h2>
-          </div>
-        </div>
+					<div class="col-lg-12">
+						<h2>Születési hely és tanulmányok kapcsolata</h2>
+					</div>
+	        	</div>
 				<hr />
 				<div class="row">
 					<div class="col-lg-12">
@@ -86,27 +86,68 @@
 							profilból sok esetben nem áll rendelkezésünkre információ az egyes
 							személyek tanulmányairól, vagy éppen hibás/értelmezhetetlen a
 							bányászott adat, előbb ki kell szűrnünk a számunkra megfelelőeket.
-							A szűrés után <strong>3404</strong> felhasználóprofil	 marad.
+							A szűrés után <strong>3404</strong> felhasználóprofil	 maradt.
 							Semmiképp sem meglepő, hogy a születési helyünk jelentős
 							mértékben befolyásolja, hogy milyen tanulmányi területet választunk.
-							Az alábbi grafikon pontosan ezt ábrázolja.
+							A következő két oszlopdiagram pontosan ezt ábrázolja. Az első
+							oszlopdiagramon számszerint figyelhetjük meg az egyes tanulmányi
+							területek eloszlását születési helyenként. A második diagramon a
+							százalékos eloszlást tekinthetjük meg. <strong>Tipp:
+							egy/kettő kattintással a jelmagyarázatban található kategóriákra
+							tovább felfedezhető a grafikon.</strong>
 						</p>
 					</div>
+
 					<div class="col-lg-12 plot" id="plot1"><!-- Plotly chart --></div>
-					<!--<p>
-						(TODO: TÖBB MAGYARÁZAT)
-					</p>-->
+
+					<div class="col-lg-12">
+						<br />
+						<p>
+							Az első dolog amit észrevehetünk, hogy az összegyűjtött adatok
+							mennyisége nagyjából arányos az adott városok lakosságával,
+							<strong>Kovásznát</strong> kivéve. A városok többsége esetén a
+							lakosság <strong>0.1-1.1%-a</strong> felelt meg a szűrés után,
+							<strong>Kovászna</strong> esetén ez <strong>3.6%</strong>
+							(népességi adatok a 2011-es romániai népszámlálás alapján). A
+							tanulmányok eloszlását születési hely szerint könnyebb leolvasni
+							a következő diagramról, melyen százalékokban fejezzük ki az egyes
+							tanulmányi területeket választó emberek számát.
+						</p>
+					</div>
+					
 					<div class="col-lg-12 plot" id="plot2"><!-- Plotly chart --></div>
-					<!--<p>
-						(TODO: TÖBB MAGYARÁZAT)
-					</p>-->
+					
+					<div class="col-lg-12">
+						<br />
+						<p>
+							Észrevehető, hogy a <strong>kisebb városok</strong> esetén (Parajd, Szentegyházasfalu,
+							Barót, Székelykeresztúr, Szováta) esetén népszerűbbek az
+							<strong>alkalmazott tudományok</strong>,
+							a szakképzés (6-20%). További érdekesség, hogy legnagyobb mértékben
+							<strong>egészségügyi képzésben</strong>
+							a <strong>marosvásárhelyen</strong>
+							született emberek vesznek részt (18%), ez magyarázható azzal, hogy
+							ott található a Marosvásárhelyi Orvosi és Gyógyszerészeti Egyetem.
+							A városok közül szinte az összes esetén népszerűnek számít a
+							társadalomtudományok, a mérnöki/technológia, a
+							matematika/informatika és a pénzügy/management képzés is. Az alábbi
+							hőtérképen további információkat lehet leolvasni arról, hogy az
+							egyes születési helyek hogyan befolyásolják a Székely(földi) emberek
+							választását tanulmányaikat illetően.
+						</p>
+					</div>
+					<br />
+					
+					<div class="col-lg-12 plot" id="plot11"><!-- Plotly chart --></div>
+					
+					<br />
 				</div>
 				<br />
 				<div class="row">
-          <div class="col-lg-12">
-            <h2>Lakhely és tanulmányok kapcsolata</h2>
-          </div>
-        </div>
+					<div class="col-lg-12">
+						<h2>Lakhely és tanulmányok kapcsolata</h2>
+					</div>
+	        	</div>
 				<hr />
 				<div class="row">
 					<div class="col-lg-12">
@@ -115,27 +156,46 @@
 							és a <strong>tanulmányi területek</strong> közti összefüggéseket!
 							Hasonlóan a tanulmányokhoz az <strong>49220</strong>
 							profilból sok esetben nem áll rendelkezésünkre információ az egyes
-							személyek lakhelyéről, vagy éppen hibás/értelmezhetetlen a
-							bányászott adat, előbb ki kell szűrnünk a számunkra megfelelőeket,
-							ezúttal mind a lakhely, mind a tanulmányok szempontjából.
-							A szűrés után <strong>2334</strong> felhasználóprofil	 marad.
-</p>
+							személyek lakhelyéről, tanulmányairól, vagy éppen
+							hibás/értelmezhetetlen a bányászott adat, ezért előbb ki kell szűrnünk
+							a számunkra megfelelőeket, ezúttal mind a lakhely, mind a
+							tanulmányok szempontjából. A szűrés után <strong>2334</strong>
+							felhasználóprofil marad. Hasonlóan az eddigiekhez, két oszlopdiagramot
+							vizsgálhatunk meg.
+						</p>
+						
 						<div class="col-lg-12 plot" id="plot5"><!-- Plotly chart --></div>
-						<!--<p>
-							(TODO: TÖBB MAGYARÁZAT)
-						</p>-->
+						
+						<div class="col-lg-12">
+							<br />
+							<p>
+								Az első fontos észrevétel, hogy az adatok nagyrésze
+								<strong>Kolozsváron</strong>, illetve <strong>Marosvásárhelyen</strong>
+								élő emberekhez tartozik. Ebből arra következtethetünk, hogy ezekbe a városokba költöznek leginkább a Székely(földi)ek. Megjelenik továbbá <strong>Sepsiszentgyörgy</strong>,
+								<strong>Róma</strong>, <strong>Székelyudvarhely</strong>, 
+
+							</p>
+						</div>
+
 						<div class="col-lg-12 plot" id="plot6"><!-- Plotly chart --></div>
-						<!--<p>
-							(TODO: TÖBB MAGYARÁZAT)
-						</p>-->
+						
+						<div class="col-lg-12">
+							<br />
+							<p>
+								TODO: Kiegészít
+							</p>
+						</div>
+
+						<div class="col-lg-12 plot" id="plot12"><!-- Plotly chart --></div>
+
 					</div>
 				</div>
 				<br />
 				<div class="row">
-          <div class="col-lg-12">
-            <h2>Születési hely és szakterület kapcsolata</h2>
-          </div>
-        </div>
+					<div class="col-lg-12">
+						<h2>Születési hely és szakterület kapcsolata</h2>
+					</div>
+	        	</div>
 				<hr />
 				<div class="row">
 					<div class="col-lg-12">
@@ -144,17 +204,36 @@
 							<strong>szakterület</strong> szerint, ebben az esetben a
 							<strong>49220</strong> profilból <strong>6940</strong> marad.
 							Hasonlóan a tanulmányi területhez, a szekterület is jelentős
-							mértékben függ születési helyünktől.						</p>
-						<div class="col-lg-12 plot" id="plot3"><!-- Plotly chart --></div>
-						<div class="col-lg-12 plot" id="plot4"><!-- Plotly chart --></div>
+							mértékben függ születési helyünktől.
+						</p>
 					</div>
+
+					<div class="col-lg-12 plot" id="plot3"><!-- Plotly chart --></div>
+
+					<div class="col-lg-12">
+						<br />
+						<p>
+							TODO: Kiegészít
+						</p>
+					</div>
+
+					<div class="col-lg-12 plot" id="plot4"><!-- Plotly chart --></div>
+
+					<div class="col-lg-12">
+						<br />
+						<p>
+							TODO: Kiegészít
+						</p>
+					</div>
+
+					<div class="col-lg-12 plot" id="plot13"><!-- Plotly chart --></div>
 				</div>
 				<br />
 				<div class="row">
-          <div class="col-lg-12">
-            <h2>Lakhely és szakterület kapcsolata</h2>
-          </div>
-        </div>
+					<div class="col-lg-12">
+						<h2>Lakhely és szakterület kapcsolata</h2>
+					</div>
+	        	</div>
 				<hr />
 				<div class="row">
 					<div class="col-lg-12">
@@ -164,15 +243,27 @@
 							szerint, ebben az esetben a <strong>49220</strong> profilból
 							<strong>5102</strong> marad.
 						</p>
-						<div class="col-lg-12 plot" id="plot7"><!-- Plotly chart --></div>
-						<!--<p>
-							(TODO: TÖBB MAGYARÁZAT)
-						</p>-->
-						<div class="col-lg-12 plot" id="plot8"><!-- Plotly chart --></div>
-						<!--<p>
-							(TODO: TÖBB MAGYARÁZAT)
-						</p>-->
 					</div>
+					
+					<div class="col-lg-12 plot" id="plot7"><!-- Plotly chart --></div>
+					
+					<div class="col-lg-12">
+						<br />
+						<p>
+							TODO: Kiegészít
+						</p>
+					</div>
+
+					<div class="col-lg-12 plot" id="plot8"><!-- Plotly chart --></div>
+					
+					<div class="col-lg-12">
+						<br />
+						<p>
+							TODO: Kiegészít
+						</p>
+					</div>
+
+					<div class="col-lg-12 plot" id="plot14"><!-- Plotly chart --></div>
 				</div>
 				<br />
 				<div class="row">
@@ -189,16 +280,28 @@
 							ismét szűrűnk, ez esetben a <strong>49220</strong> profilból
 							<strong>1095</strong> marad.
 						</p>
-						<div class="col-lg-12 plot" id="plot9"><!-- Plotly chart --></div>
-						<!--<p>
-							(TODO: TÖBB MAGYARÁZAT)
-						</p>-->
-						<div class="col-lg-12 plot" id="plot10"><!-- Plotly chart --></div>
-						<!--<p>
-							(TODO: TÖBB MAGYARÁZAT)
-						</p>-->
 					</div>
+						<div class="col-lg-12 plot" id="plot9"><!-- Plotly chart --></div>
+						
+						<div class="col-lg-12">
+							<br />
+							<p>
+								TODO: Kiegészít
+							</p>
+						</div>
+
+						<div class="col-lg-12 plot" id="plot10"><!-- Plotly chart --></div>
+						
+						<div class="col-lg-12">
+							<br />
+							<p>
+								TODO: Kiegészít
+							</p>
+						</div>
+
+						<div class="col-lg-12 plot" id="plot15"><!-- Plotly chart --></div>
 				</div>
+
 				<div>
 					<!--<p>
 						(TODO: ADATOK+KÓD, SANKEY DIAGRAMM (Tanulmányok-Munka),
@@ -213,7 +316,7 @@
 				</p>
 			</div>
 			-->
-    </section>
+	    </section>
 
 		<section class="footer p-3">
 			<div class="container text-center text-light">
@@ -233,6 +336,11 @@
 		<script src="js/plot8.js"></script>
 		<script src="js/plot9.js"></script>
 		<script src="js/plot10.js"></script>
+		<script src="js/plot11.js"></script>
+		<script src="js/plot12.js"></script>
+		<script src="js/plot13.js"></script>
+		<script src="js/plot14.js"></script>
+		<script src="js/plot15.js"></script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
