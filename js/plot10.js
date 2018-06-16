@@ -74,6 +74,10 @@ function loadJSON(callback, filename) {
         {
           "color": 'rgb(238, 238, 238)'
         }
+      },
+      margin:
+      {
+        "b": 120,
       }
     };
 

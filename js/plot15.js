@@ -78,7 +78,7 @@ function loadJSON(callback, filename) {
       },
       margin:
       {
-        "l": 160,
+        "l": 170,
         "r": 80,
         "t": 100,
         "b": 110,
